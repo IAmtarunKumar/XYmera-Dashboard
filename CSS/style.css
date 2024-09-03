@@ -21,7 +21,7 @@ box-sizing: border-box;
 }
 .nav-link:hover {
     color: #ffc107 ; /* Gold color on hover */
-    padding: 10px;
+ 
   
 }
 .icon-box {
@@ -45,23 +45,58 @@ box-sizing: border-box;
     margin-right: 30px !important;
 }
 
-
-/* crawsal css  */
+/* Carousel Item Styling */
 .carousel-item {
     position: relative;
     overflow: hidden;
 }
+
+/* Image Styling */
 .carousel-item img {
     object-fit: cover;
-    height: 500px; /* Adjust the height to fit your design */
+    height: 500px; /* Default height for large screens */
     width: 100%;
     display: block;
 }
-/* Optional: Add a max-height to prevent the carousel from growing too large */
+
+/* Container to Control Carousel Height */
 .carousel-inner {
     max-height: 500px; /* Same height as the image */
 }
 
+/* Responsive Design */
+@media (max-width: 992px) {
+    /* For tablets and smaller screens */
+    .carousel-item img {
+        height: 400px; /* Reduce height for medium-sized screens */
+    }
+
+    .carousel-inner {
+        max-height: 400px; /* Match the image height */
+    }
+}
+
+@media (max-width: 768px) {
+    /* For smartphones */
+    .carousel-item img {
+        height: 300px; /* Reduce height for small screens */
+    }
+
+    .carousel-inner {
+        max-height: 300px; /* Match the image height */
+    }
+}
+
+@media (max-width: 576px) {
+    /* For very small devices */
+    .carousel-item img {
+        height: 250px; /* Further reduce height */
+    }
+
+    .carousel-inner {
+        max-height: 250px; /* Match the image height */
+    }
+}
 
 
 
@@ -86,83 +121,108 @@ flex-wrap: wrap;
 align-items: center;
 }
 
-.about-content {
-display: flex;
-flex-wrap: wrap;
-gap: 30px;
-align-items: center;
-justify-content: center;
+/* ///////////////// */
+/* Wrapper for About Us Section */
+.about-us {
+    margin: auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    max-width: 1200px;
+    width: 100%;
 }
 
+/* Container for Content */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Enables wrapping for smaller screens */
+    gap: 30px; /* Adds gap between elements */
+}
+
+/* Content Styling */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+/* Image Styling */
 .about-image {
-flex: 1;
-min-width: 280px;
-max-width: 500px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
 }
 
 .about-image img {
-width: 80%;
-border-radius: 10px;
-display: block;
+    width: 100%;
+    border-radius: 10px;
+    display: block;
 }
 
+/* Text Styling */
 .about-text {
-flex: 2;
-max-width: 600px;
+    flex: 2;
+    max-width: 600px;
 }
 
 .about-text h3 {
-color: #007bff;
-font-size: 1.2rem;
-margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .about-text h2 {
-font-size: 2rem;
-color: #333;
-margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .about-text h2 span {
-color: #007bff;
+    color: #3368c6;
 }
 
 .about-text p {
-margin-bottom: 15px;
-color: #555;
+    color: #555;
+    margin-bottom: 15px;
 }
 
+/* Button Styling */
 .button {
-display: inline-block;
-padding: 12px 25px;
-background-color: #007bff;
-color: #fff;
-text-decoration: none;
-border-radius: 25px;
-font-size: 1rem;
-transition: background-color 0.3s ease;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-.about-content {
-flex-direction: column;
-text-align: center;
-}
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column; /* Stacks elements vertically */
+        text-align: center; /* Centers text content */
+    }
 
-.about-text {
-max-width: 100%;
-}
+    .about-text {
+        max-width: 100%; /* Full width on smaller screens */
+    }
 
-.about-image {
-max-width: 100%;
+    .about-image {
+        max-width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Adds spacing below image */
+        
+    }
 }
-}
-
 
 
 /* our product  */
